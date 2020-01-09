@@ -1,4 +1,4 @@
-# Empfangerli
+# Senderli
 
 [Tutorial](https://www.rabbitmq.com/tutorials/tutorial-one-elixir.html)
 [Github](https://github.com/rabbitmq/rabbitmq-tutorials/tree/master/elixir)
@@ -14,30 +14,30 @@ postgres       9.4.7
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `empfangerli` to your list of dependencies in `mix.exs`:
+by adding `senderli` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
   [
-    {:empfangerli, "~> 0.1.0"}
+    {:senderli, "~> 0.1.0"}
   ]
 end
 ```
 
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/empfangerli](https://hexdocs.pm/empfangerli).
+be found at [https://hexdocs.pm/senderli](https://hexdocs.pm/senderli).
 
 ## First steps
 1. Run the docker images.
-2. The **images** uses the user: "rabbitmq", passord: "rabbitmq"
+2. The images uses the user: "rabbitmq", passord: "rabbitmq"
 
 Start you iex
-`iex --sname empfangerli -S mix`
+`iex --sname senderli -S mix`
 
 Open a new connection (Don't forget to set the password and user name)
 ```
-iex(empfangerli@tobi-viu)1> {:ok, connection} = AMQP.Connection.open(username: "rabbitmq", password: "rabbitmq")
+iex(senderli@tobi-viu)1> {:ok, connection} = AMQP.Connection.open(username: "rabbitmq", password: "rabbitmq")
 {:ok, %AMQP.Connection{pid: #PID<0.246.0>}}
 ```
 

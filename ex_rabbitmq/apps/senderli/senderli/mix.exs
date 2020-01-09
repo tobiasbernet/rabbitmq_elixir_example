@@ -1,11 +1,11 @@
-defmodule Empfangerli.MixProject do
+defmodule Senderli.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :empfangerli,
+      app: :senderli,
       version: "0.1.0",
-      elixir: "~> 1.9",
+      elixir: "~> 1.9.1",
       start_permanent: Mix.env() == :prod,
       deps: deps()
     ]
@@ -16,7 +16,7 @@ defmodule Empfangerli.MixProject do
     [
       applications: [:amqp],
       extra_applications: [:logger],
-      mod: {Empfangerli.Application, []}
+      mod: {Senderli.Application, []}
     ]
   end
 
@@ -24,6 +24,7 @@ defmodule Empfangerli.MixProject do
   defp deps do
     [
       {:amqp, "~> 1.3.2"},
+      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
     ]
   end
 end
