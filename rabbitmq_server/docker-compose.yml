@@ -1,0 +1,14 @@
+# Docker-compose for Graylog
+
+rabbit:
+  image: "rabbitmq:3.8.0-alpine"
+  hostname: "hasli"
+  environment:
+    RABBITMQ_ERLANG_COOKIE: "SWQOKODSQALRPCLNMEQG"
+    RABBITMQ_DEFAULT_USER: "rabbitmq"
+    RABBITMQ_DEFAULT_PASS: "rabbitmq"
+    RABBITMQ_DEFAULT_VHOST: "/"
+  ports:
+    - "5672:5672"
+  labels:
+    NAME: "hasli"
