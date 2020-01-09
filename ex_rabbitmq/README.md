@@ -1,4 +1,0 @@
-# ExRabbitmq
-
-**TODO: Add description**
-
